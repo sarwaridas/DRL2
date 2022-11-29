@@ -1,82 +1,50 @@
 TensorFlow 2.0 Upgrade Script
 -----------------------------
 Converted 1 files
-Detected 5 issues that require attention
+Detected 2 issues that require attention
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
-File: SNQN.py
+File: SASRecModules.py
 --------------------------------------------------------------------------------
-SNQN.py:74:29: WARNING: tf.nn.embedding_lookup requires manual check. `partition_strategy` has been removed from tf.nn.embedding_lookup.  The 'div' strategy will be used by default.
-SNQN.py:155:36: WARNING: tf.nn.embedding_lookup requires manual check. `partition_strategy` has been removed from tf.nn.embedding_lookup.  The 'div' strategy will be used by default.
-SNQN.py:170:26: WARNING: tf.nn.embedding_lookup requires manual check. `partition_strategy` has been removed from tf.nn.embedding_lookup.  The 'div' strategy will be used by default.
-SNQN.py:205:27: ERROR: Using member tf.contrib.layers.fully_connected in deprecated module tf.contrib. tf.contrib.layers.fully_connected cannot be converted automatically. tf.contrib will not be distributed with TensorFlow 2.0, please consider an alternative in non-contrib TensorFlow, a community-maintained repository such as tensorflow/addons, or fork the required code.
-SNQN.py:208:26: ERROR: Using member tf.contrib.layers.fully_connected in deprecated module tf.contrib. tf.contrib.layers.fully_connected cannot be converted automatically. tf.contrib will not be distributed with TensorFlow 2.0, please consider an alternative in non-contrib TensorFlow, a community-maintained repository such as tensorflow/addons, or fork the required code.
+SASRecModules.py:91:23: WARNING: tf.get_variable requires manual check. tf.get_variable returns ResourceVariables by default in 2.0, which have well-defined semantics and are stricter about shapes. You can disable this behavior by passing use_resource=False, or by calling tf.compat.v1.disable_resource_variables().
+SASRecModules.py:99:18: WARNING: tf.nn.embedding_lookup requires manual check. `partition_strategy` has been removed from tf.nn.embedding_lookup.  The 'div' strategy will be used by default.
 ================================================================================
 Detailed log follows:
 
 ================================================================================
 --------------------------------------------------------------------------------
-Processing file 'SNQN.py'
- outputting to 'SQN_upgraded.py'
+Processing file 'SASRecModules.py'
+ outputting to 'SASRecModules.py'
 --------------------------------------------------------------------------------
 
-64:27: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
-67:13: INFO: Renamed 'tf.variable_scope' to 'tf.compat.v1.variable_scope'
-69:26: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
-70:29: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
-74:29: INFO: Added keywords to args of function 'tf.nn.embedding_lookup'
-74:29: WARNING: tf.nn.embedding_lookup requires manual check. `partition_strategy` has been removed from tf.nn.embedding_lookup.  The 'div' strategy will be used by default.
-77:46: INFO: Renamed 'tf.nn.dynamic_rnn' to 'tf.compat.v1.nn.dynamic_rnn'
-78:20: INFO: Renamed 'tf.contrib.rnn.GRUCell' to 'tf.compat.v1.nn.rnn_cell.GRUCell'
-85:38: INFO: Changed tf.to_float call to tf.cast(..., dtype=tf.float32).
-95:25: INFO: `name` passed to `name_scope`. Because you may be re-entering an existing scope, it is not safe to convert automatically,  the v2 name_scope does not support re-entering scopes by name.
+22:11: INFO: Added keywords to args of function 'tf.convert_to_tensor'
+90:9: INFO: Renamed 'tf.variable_scope' to 'tf.compat.v1.variable_scope'
+91:23: WARNING: tf.get_variable requires manual check. tf.get_variable returns ResourceVariables by default in 2.0, which have well-defined semantics and are stricter about shapes. You can disable this behavior by passing use_resource=False, or by calling tf.compat.v1.disable_resource_variables().
+91:23: INFO: Renamed 'tf.get_variable' to 'tf.compat.v1.get_variable'
+95:51: INFO: Multiplying scale arg of tf.contrib.layers.l2_regularizer by half to what tf.keras.regularizers.l2 expects.
 
-95:25: INFO: Renamed 'tf.name_scope' to 'tf.compat.v1.name_scope'
-98:40: INFO: Renamed 'tf.truncated_normal' to 'tf.random.truncated_normal'
-101:31: INFO: Added keywords to args of function 'tf.nn.conv2d'
-101:31: INFO: Renamed keyword argument for tf.nn.conv2d from filter to filters
-112:33: INFO: Added keywords to args of function 'tf.nn.max_pool'
-112:33: INFO: Renamed keyword argument for tf.nn.max_pool from value to input
-112:33: INFO: Renamed 'tf.nn.max_pool' to 'tf.nn.max_pool2d'
-125:21: INFO: `name` passed to `name_scope`. Because you may be re-entering an existing scope, it is not safe to convert automatically,  the v2 name_scope does not support re-entering scopes by name.
-
-125:21: INFO: Renamed 'tf.name_scope' to 'tf.compat.v1.name_scope'
-127:36: INFO: Renamed 'tf.truncated_normal' to 'tf.random.truncated_normal'
-129:27: INFO: Added keywords to args of function 'tf.nn.conv2d'
-129:27: INFO: Renamed keyword argument for tf.nn.conv2d from filter to filters
-140:21: INFO: `name` passed to `name_scope`. Because you may be re-entering an existing scope, it is not safe to convert automatically,  the v2 name_scope does not support re-entering scopes by name.
-
-140:21: INFO: Renamed 'tf.name_scope' to 'tf.compat.v1.name_scope'
-141:41: INFO: Renamed 'tf.layers.dropout' to 'tf.compat.v1.layers.dropout'
-143:67: INFO: Added keywords to args of function 'tf.convert_to_tensor'
-146:38: INFO: Changed tf.to_float call to tf.cast(..., dtype=tf.float32).
-155:36: INFO: Added keywords to args of function 'tf.nn.embedding_lookup'
-155:36: WARNING: tf.nn.embedding_lookup requires manual check. `partition_strategy` has been removed from tf.nn.embedding_lookup.  The 'div' strategy will be used by default.
-170:26: INFO: Added keywords to args of function 'tf.nn.embedding_lookup'
-170:26: WARNING: tf.nn.embedding_lookup requires manual check. `partition_strategy` has been removed from tf.nn.embedding_lookup.  The 'div' strategy will be used by default.
-171:81: INFO: Added keywords to args of function 'tf.shape'
-172:58: INFO: Added keywords to args of function 'tf.shape'
-175:38: INFO: Changed tf.to_float call to tf.cast(..., dtype=tf.float32).
-177:27: INFO: Renamed 'tf.layers.dropout' to 'tf.compat.v1.layers.dropout'
-179:54: INFO: Added keywords to args of function 'tf.convert_to_tensor'
-185:25: INFO: Renamed 'tf.variable_scope' to 'tf.compat.v1.variable_scope'
-205:27: ERROR: Using member tf.contrib.layers.fully_connected in deprecated module tf.contrib. tf.contrib.layers.fully_connected cannot be converted automatically. tf.contrib will not be distributed with TensorFlow 2.0, please consider an alternative in non-contrib TensorFlow, a community-maintained repository such as tensorflow/addons, or fork the required code.
-208:26: ERROR: Using member tf.contrib.layers.fully_connected in deprecated module tf.contrib. tf.contrib.layers.fully_connected cannot be converted automatically. tf.contrib will not be distributed with TensorFlow 2.0, please consider an alternative in non-contrib TensorFlow, a community-maintained repository such as tensorflow/addons, or fork the required code.
-212:27: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
-214:34: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
-216:29: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
-217:37: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
-219:26: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
-220:28: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
-222:36: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
-223:44: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
-241:24: INFO: Added keywords to args of function 'tf.reduce_mean'
-242:23: INFO: Renamed 'tf.train.AdamOptimizer' to 'tf.compat.v1.train.AdamOptimizer'
-247:17: INFO: Renamed 'tf.variable_scope' to 'tf.compat.v1.variable_scope'
-248:47: INFO: Renamed 'tf.random_normal' to 'tf.random.normal'
-250:45: INFO: Renamed 'tf.random_normal' to 'tf.random.normal'
-333:4: INFO: Renamed 'tf.reset_default_graph' to 'tf.compat.v1.reset_default_graph'
-344:9: INFO: Renamed 'tf.Session' to 'tf.compat.v1.Session'
-346:17: INFO: Renamed 'tf.global_variables_initializer' to 'tf.compat.v1.global_variables_initializer'
+99:18: INFO: Added keywords to args of function 'tf.nn.embedding_lookup'
+99:18: WARNING: tf.nn.embedding_lookup requires manual check. `partition_strategy` has been removed from tf.nn.embedding_lookup.  The 'div' strategy will be used by default.
+134:9: INFO: Renamed 'tf.variable_scope' to 'tf.compat.v1.variable_scope'
+142:12: INFO: Renamed 'tf.layers.dense' to 'tf.compat.v1.layers.dense'
+143:12: INFO: Renamed 'tf.layers.dense' to 'tf.compat.v1.layers.dense'
+144:12: INFO: Renamed 'tf.layers.dense' to 'tf.compat.v1.layers.dense'
+152:32: INFO: Added keywords to args of function 'tf.transpose'
+158:35: INFO: Added keywords to args of function 'tf.reduce_sum'
+160:62: INFO: Added keywords to args of function 'tf.shape'
+163:18: INFO: Renamed 'tf.where' to 'tf.compat.v1.where'
+169:54: INFO: Added keywords to args of function 'tf.shape'
+172:22: INFO: Renamed 'tf.where' to 'tf.compat.v1.where'
+178:37: INFO: Added keywords to args of function 'tf.reduce_sum'
+180:70: INFO: Added keywords to args of function 'tf.shape'
+184:18: INFO: Renamed 'tf.layers.dropout' to 'tf.compat.v1.layers.dropout'
+184:73: INFO: Added keywords to args of function 'tf.convert_to_tensor'
+219:9: INFO: Renamed 'tf.variable_scope' to 'tf.compat.v1.variable_scope'
+223:18: INFO: Renamed 'tf.layers.conv1d' to 'tf.compat.v1.layers.conv1d'
+224:18: INFO: Renamed 'tf.layers.dropout' to 'tf.compat.v1.layers.dropout'
+224:73: INFO: Added keywords to args of function 'tf.convert_to_tensor'
+228:18: INFO: Renamed 'tf.layers.conv1d' to 'tf.compat.v1.layers.conv1d'
+229:18: INFO: Renamed 'tf.layers.dropout' to 'tf.compat.v1.layers.dropout'
+229:73: INFO: Added keywords to args of function 'tf.convert_to_tensor'
 --------------------------------------------------------------------------------
 
