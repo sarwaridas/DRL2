@@ -323,7 +323,7 @@ def evaluate(sess):
     off_click_ng=[0.0]
     off_purchase_ng=[0.0]
 
-    while evaluated<len(eval_ids):
+    while evaluated<len(eval_ids) + batch:
         states, len_states, actions, rewards = [], [], [], []
         for i in range(batch):
             id=eval_ids[evaluated]
@@ -480,7 +480,7 @@ if __name__ == '__main__':
                     total_step += 1
                     if total_step % 200 == 0:
                         print("the loss in %dth batch is: %f" % (total_step, loss))
-                    if total_step % 4000 == 0:
+                    if total_step % 8000 == 0:
                         evaluate(sess)
                 else:
 
@@ -505,7 +505,7 @@ if __name__ == '__main__':
                     total_step += 1
                     if total_step % 200 == 0:
                         print("the loss in %dth batch is: %f" % (total_step, loss))
-                    if total_step % 4000 == 0:
+                    if total_step % 8000 == 0:
                         evaluate(sess)
 
 
