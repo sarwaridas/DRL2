@@ -378,7 +378,7 @@ if __name__ == '__main__':
     reward_click = args.r_click
     reward_buy = args.r_buy
     reward_negative=args.r_negative
-    topk=[5,10,15,20]
+    topk=[3,5,8]
     # save_file = 'pretrain-GRU/%d' % (hidden_size)
 
     tf.compat.v1.reset_default_graph()
