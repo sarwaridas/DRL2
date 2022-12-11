@@ -2,14 +2,6 @@
 
 ### Final project for AIPI590, Fall 2022 at Duke University to train and compare performance of session based recommendors.
 
-## Contributors
-
-| Name | Reference |
-|---- | ----|
-|Abhijith Tammanagari | [GitHub Profile](https://github.com/23abhijith)|
-|Sarwari Das | [GitHub Profile](https://github.com/HarTigran)|
-|Tigran Harutyunyan |[GitHub Profile](https://github.com/sarwaridas)|
-
 
 https://towardsdatascience.com/ranking-evaluation-metrics-for-recommender-systems-263d0a66ef54
 
@@ -56,3 +48,13 @@ And NDCG is simply to normalize the DCG score by IDCG such that its value is alw
 | **Models**  | **HR@3** | **NG@3** | **HR@5** | **NG@5** | **HR@8** | **NG@8** |
 | :---------: | :------: | :------: | :-------: | :-------: | :-------: | :-------: |
 | SASRec-SA2C |  **0.1839**  |  **0.1477**  |  **0.2175**   |  **0.1616**   |  **0.2526**   |  **0.1735**   |
+
+
+## Contributors
+
+| Name | Reference |
+|---- | ----|
+|Abhijith Tammanagari | [GitHub Profile](https://github.com/23abhijith)|
+|Sarwari Das | [GitHub Profile](https://github.com/HarTigran)|
+|Tigran Harutyunyan |[GitHub Profile](https://github.com/sarwaridas)|
+
