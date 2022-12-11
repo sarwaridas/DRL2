@@ -1,7 +1,14 @@
 #  Deep RL product recommenders for E-commerce platforms
 
-## Final project for AIPI590, Fall 2022 at Duke University to train and compare performance of session based recommendors.
+### Final project for AIPI590, Fall 2022 at Duke University to train and compare performance of session based recommendors.
 
+## Contributors
+
+| Name | Reference |
+|---- | ----|
+|Abhijith Tammanagari | [GitHub Profile](https://github.com/23abhijith)|
+|Sarwari Das | [GitHub Profile](https://github.com/HarTigran)|
+|Tigran Harutyunyan |[GitHub Profile](https://github.com/sarwaridas)|
 
 
 https://towardsdatascience.com/ranking-evaluation-metrics-for-recommender-systems-263d0a66ef54
