@@ -2,14 +2,24 @@
 
 ### Project Summary
 
-This project implements methods described by the paper [*Supervised Advantage Actor-Critic for Recommender Systems* [1]](https://arxiv.org/pdf/2111.03474.pdf) to address two key challenges in session-based recommender systems (RS) to maximise cumulative profits: impractical usage of reinforcement learning (RL) algorithms and the lack of negative reward signals. For the former, we combine RL and (self-)supervised sequential learning approaches to use RL as a regularizer of supervised learning models, while the latter involves using a negative sampling strategy for training the RL component and combining it with supervised sequential learning. In the paper, this method is referred to as 'Supervised Negative Q-learning (SNQN)'. We follow the paper to calculate the advantage of a positive action over the average case in a Supervised Advantage Actor-Critic (SA2C) farmework, which can be further utilized as a normalized weight for learning the supervised sequential part.
+This project implements methods described by the paper [*Supervised Advantage Actor-Critic for Recommender Systems* [1]](https://arxiv.org/pdf/2111.03474.pdf) to address two key challenges in session-based recommender systems (RS) that aim to maximise cumulative profits: impractical usage of reinforcement learning (RL) algorithms and the lack of negative reward signals. For the former, we combine RL and (self-)supervised sequential learning approaches to use RL as a regularizer of supervised learning models, while the latter involves using a negative sampling strategy for training the RL component and combining it with supervised sequential learning. In the paper, this method is referred to as 'Supervised Negative Q-learning (SNQN)'. We follow the paper to calculate the advantage of a positive action over the average case in a Supervised Advantage Actor-Critic (SA2C) farmework, which can be further utilized as a normalized weight for learning the supervised sequential part.
 
-We conduct experiments using SNQN and SA2C for two real world datasets: Diginetica and RetailRocket. 
+We conduct experiments using SNQN and SA2C for two real world datasets: [Diginetica](https://competitions.codalab.org/competitions/11161) and [RetailRocket](https://www.kaggle.com/datasets/retailrocket/ecommerce-dataset). 
 
 
  <img width=390 align="center" src="img\diginetica.jpeg">
+ 
+Released as a part of the 2016 CIKM cup, this dataset includes user sessions extracted from an e-commerce search engine logs, with anonymized user ids, hashed queries, hashed query terms, hashed product descriptions and meta-data, log-scaled prices, clicks, and purchases. It includes 1,235,380 views and
+18,025 purchases across 232,816 users and 184,047 items. 
+ 
  <img width=390 align="center" src="img\RetailRocket.png">
 
+Released as a part of a Kaggle competition, this dataset was collected from a real-world ecommerce website and consists of behaviour data, item properties and category trees. The behaviour data, i.e. events like clicks, add to carts, transactions, represent interactions that were collected over a period of 4.5 months. A visitor can make three types of events, namely “view”, “addtocart” or “transaction”. In total there are 2,756,101 events including 2,664,312 views, 69,332 add to carts and 22,457 transactions produced by 1,407,580 unique visitors. 
+
+Our work proceeds in three main steps:
+- Implement code of *Supervised Advantage Actor-Critic for Recommender Systems* on data from Diginetica and RetailRocket.
+- Use offline evaluation metrics to benchmark performance of Deep RL recommendor
+- See how results compare to a Non-Deep RL recommendor, in our case, collaborative filtering.
 
 <!-- https://towardsdatascience.com/ranking-evaluation-metrics-for-recommender-systems-263d0a66ef54
  -->
