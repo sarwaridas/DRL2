@@ -43,14 +43,14 @@ Gain for an item is essentially the same as the relevance score, which can be nu
 
 Naturally Cumulative Gain is defined as the sum of gains up to a position k in the recommendation list
 
-![image](https://miro.medium.com/max/584/1*GEvXfCqT6hq_KNT_WMnRFA.webp)
+<img width=250 align="center" src="https://miro.medium.com/max/584/1*GEvXfCqT6hq_KNT_WMnRFA.webp">
 
 
 One obvious drawback of CG is that it does not take into account of ordering. By swapping the relative order of any two items, the CG would be unaffected. This is problematic when ranking order is important. For example, on Google Search results, you would obviously not like placing the most relevant web page at the bottom.
 
 To penalize highly relevant items being placed at the bottom, we introduce the DCG
 
-![image](https://miro.medium.com/max/640/1*sb2sXH1RHQFgZgl4l9pCSw.webp)
+ <img width=250 align="center" src="https://miro.medium.com/max/640/1*sb2sXH1RHQFgZgl4l9pCSw.webp">
 
 By diving the gain by its rank, we sort of push the algorithm to place highly relevant items to the top to achieve the best DCG score.
 
@@ -58,7 +58,7 @@ There is still a drawback of DCG score. It is that DCG score adds up with the le
 
 We tackle this issue by introducing IDCG (ideal DCG). IDCG is the DCG score for the most ideal ranking, which is ranking the items top down according their relevance up to position k.
 
-![image](https://miro.medium.com/max/828/1*cDC8roXZrP-iUeR1vlmGBQ.webp)
+ <img width=550 align="center" src="https://miro.medium.com/max/828/1*cDC8roXZrP-iUeR1vlmGBQ.webp">
 
 And NDCG is simply to normalize the DCG score by IDCG such that its value is always between 0 and 1 regardless of the length.
 
