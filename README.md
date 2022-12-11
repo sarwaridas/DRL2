@@ -1,5 +1,9 @@
 #  Deep RL product recommenders for E-commerce platforms
 
+## Final project for AIPI590, Fall 2022 at Duke University to train and compare performance of session based recommendors.
+
+
+
 https://towardsdatascience.com/ranking-evaluation-metrics-for-recommender-systems-263d0a66ef54
 
 ### HR (Hit Ratio)
