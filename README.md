@@ -1,4 +1,4 @@
-# DRL2
+#  Deep RL product recommenders for E-commerce platforms
 
 https://towardsdatascience.com/ranking-evaluation-metrics-for-recommender-systems-263d0a66ef54
 
