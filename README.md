@@ -1,15 +1,20 @@
-#  Deep RL product recommenders for E-commerce platforms
+### Final project for AIPI590, Fall 2022: Deep RL product recommenders for E-commerce platforms
 
-### Final project for AIPI590, Fall 2022 at Duke University to train and compare performance of session based recommendors.
+### Project Summary
 
-## Project Summary
+This project implements methods described by the paper [*Supervised Advantage Actor-Critic for Recommender Systems* [1]](https://arxiv.org/pdf/2111.03474.pdf) to address two key challenges in session-based recommender systems (RS) to maximise cumulative profits: impractical usage of reinforcement learning (RL) algorithms and the lack of negative reward signals. For the former, we combine RL and (self-)supervised sequential learning approaches to use RL as a regularizer of supervised learning models, while the latter involves using a negative sampling strategy for training the RL component and combining it with supervised sequential learning. In the paper, this method is referred to as 'Supervised Negative Q-learning (SNQN)'. We follow the paper to calculate the advantage of a positive action over the average case in a Supervised Advantage Actor-Critic (SA2C) farmework, which can be further utilized as a normalized weight for learning the supervised sequential part.
+
+We conduct experiments using SNQN and SA2C for two real world datasets: Diginetica and RetailRocket. 
+
 
  <img width=390 align="center" src="img\diginetica.jpeg">
  <img width=390 align="center" src="img\RetailRocket.png">
 
 
-https://towardsdatascience.com/ranking-evaluation-metrics-for-recommender-systems-263d0a66ef54
-
+<!-- https://towardsdatascience.com/ranking-evaluation-metrics-for-recommender-systems-263d0a66ef54
+ -->
+ 
+ 
 ### HR (Hit Ratio)
 In recommender settings, the hit ratio is simply the fraction of users for which the correct answer is included in the recommendation list of length L.
 
