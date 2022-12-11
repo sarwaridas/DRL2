@@ -2,7 +2,8 @@
 
 ### Final project for AIPI590, Fall 2022 at Duke University to train and compare performance of session based recommendors.
 
-
+<!-- <img width=190 align="center" src="https://minioec-proxy.lri.fr/prod-public/logos/diginetica_logo_sq_white_3.png">
+ -->
 https://towardsdatascience.com/ranking-evaluation-metrics-for-recommender-systems-263d0a66ef54
 
 ### HR (Hit Ratio)
