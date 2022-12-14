@@ -77,7 +77,7 @@ Retail Rocket:
 | **Models**  | **HR@3** | **NG@3** | **HR@5** | **NG@5** | **HR@8** | **NG@8** |
 | :---------: | :------: | :------: | :-------: | :-------: | :-------: | :-------: |
 | SASRec-SA2C |  **0.1809**  |  **0.1536**  |  **0.2144**   |  **0.1673**   |  **0.2430**   |  **0.1770**   |
-| Microsoft-SAR |  **0.1573**  |  **0.1836**  |  **0.1716**   |  **0.1861**   |  **0.1820*   |  **0.1874**   |
+| Microsoft-SAR |  **0.1573**  |  **0.1836**  |  **0.1716**   |  **0.1861**   |  **0.1820**   |  **0.1874**   |
 
 
 * *A quick note about running Microsoft SAR on the Diginetica dataset: The Diginetica dataset has a total of 9600 users/sessions where users make purchases where they buy about 1.3 items each and a total of 9400 items being purchased. Based on this ratio, it is appearent that each user bought a different item resulting in very little interaction between users. This lack of interaction between users and items causes a non-reinforcement learning method to overfit the training data and result in very large HR and NGDC. If we use a separate testing dataset, we suspect the HR and NGDC will drop to near 0.*
