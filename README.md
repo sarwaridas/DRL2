@@ -82,6 +82,43 @@ Retail Rocket:
 
 * *A quick note about running Microsoft SAR on the Diginetica dataset: The Diginetica dataset has a total of 9600 users/sessions where users make purchases where they buy about 1.3 items each and a total of 9400 items being purchased. Based on this ratio, it is apparent that each user bought a different item resulting in very little interaction between users. This lack of interaction between users and items causes a non-reinforcement learning method to overfit the training data and result in very large HR and NGDC. If we use a separate testing dataset, we suspect the HR and NGDC will drop to near 0.*
 
+## Code Structure
+```
+├── README.md
+├── Models
+│   ├── Diginetica_SA2C.ipynb
+│   ├── Microsoft_Reccomender.ipynb
+│   └── RetailRocket_SA2C.ipynb
+├── img
+│   ├── RetailRocket.png
+│   └── diginetica.jpeg
+└── src
+    ├── Diginetica
+    │   ├── SA2C.py
+    │   ├── SASRecModules.py
+    │   ├── pop.py
+    │   ├── replay_buffer.py
+    │   ├── sample_data.py
+    │   ├── split_data.py
+    │   ├── test.py
+    │   └── utility.py
+    ├── RetailRocket
+    │   ├── SA2C.py
+    │   ├── SASRecModules.py
+    │   ├── pop.py
+    |   ├── pop_dict.txt
+    |   ├── preprocess_kaggle.py
+    │   ├── replay_buffer.py
+    │   ├── split_data.py
+    │   ├── test.py
+    │   └── utility.py
+    └── preprocessing_diginetica
+        ├── prep_data.ipynb
+        └── dataset-train
+            └── README.md
+```
+
+
 
 ## Contributors
 
