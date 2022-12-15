@@ -31,8 +31,8 @@ For both models, we conduct experiments using SNQN and SA2C for two real world d
  
 ## Running the code
 
+We used Google Colab to create jupyter notebooks for each model type (DRL and Non DRL) and dataset (Diginetica and Retail Rocket). To run our Deep RL model for Diginetica and RetailRocket, navigate to `/Models/Diginetica_SA2C.ipynb` and `/Models/RetailRocket_SA2C.ipynb`, where the respective source code is linked to `/src/Diginetica` and `/src/RetailRocket` respectively. All pre-processing steps are managed in the source code itself. Results are also computed within the individual Jupyter notebooks. Then, run `/Models/Microsoft_Reccomender.ipynb` independently for our non DRL recommender. 
 
-  
 ## Evaluation Metrics
 1.  HR (Hit Ratio): The fraction of users for which the correct answer is included in the recommendation list of length L. The larger L is, the higher hit ratio becomes, because there is a higher chance that the correct answer is included in the recommendation list. 
 
